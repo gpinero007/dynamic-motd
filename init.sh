@@ -1,16 +1,13 @@
-# install lsb-release 
+# install
 apt-get install lsb-release
-# install figlet to enable ASCII art
 apt-get install figlet
-# install update-motd software
 apt-get install update-motd
-# delete default directory
+# delete default
 rm -r /etc/update-motd.d/
-# create new directory
+# create new
 mkdir /etc/update-motd.d/
 # create dynamic files
-touch /etc/update-motd.d/00-header ; touch /etc/update-motd.d/10-sysinfo ; touch /etc/update-motd.d/90-footer
-# make files executable
+cp 00-header /etc/update-motd.d/ ; cp 10-sysinfo /etc/update-motd.d/ ; cp 90-footer /etc/update-motd.d/
 chmod +x /etc/update-motd.d/*
 # remove MOTD file
 rm /etc/motd.dynamic
