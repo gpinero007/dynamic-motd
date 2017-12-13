@@ -11,3 +11,5 @@ cp 00-header /etc/update-motd.d/ ; cp 10-sysinfo /etc/update-motd.d/ ; cp 90-foo
 chmod +x /etc/update-motd.d/*
 # remove MOTD file
 rm /etc/motd.dynamic
+rm /etc/motd
+ln -s /var/run/motd /etc/motd
